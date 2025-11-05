@@ -1,24 +1,37 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 function Navbar() {
   return (
-    <nav className="navbar">
-      <div className="logo">RoomMind</div>
-      <ul className="menu">
-        <li>홈</li>
-        <li>AI 추천</li>
-        <li>쇼핑</li>
-        <li>인테리어</li>
-        <li>커뮤니티</li>
-      </ul>
-      <div className="auth">
-        <button className="login-btn">로그인</button>
-        <button className="signup-btn">회원가입</button>
+    <header className="navbar">
+      {/* 왼쪽: 로고 */}
+      <div className="navbar-left">
+        <Link to="/" className="logo">RoomMind</Link>
       </div>
-    </nav>
+
+      {/* 중앙: 메뉴 */}
+      <ul className="navbar-menu">
+        <li><Link to="/">홈</Link></li>
+        <li><Link to="/popular">인기</Link></li>
+        <li><Link to="/shop">쇼핑</Link></li>
+        <li><Link to="/interior">AI 인테리어 추천</Link></li>
+        <li><Link to="/event">이벤트</Link></li>
+      </ul>
+
+      {/* 중앙 오른쪽: 검색창 */}
+      <div className="navbar-search">
+        <input type="text" placeholder="통합검색" />
+        <button>🔍</button>
+      </div>
+
+      {/* 오른쪽: 로그인 / 회원가입 */}
+      <div className="navbar-auth">
+        <button className="login">로그인</button>
+        <button className="signup">회원가입</button>
+      </div>
+    </header>
   );
 }
 
 export default Navbar;
-

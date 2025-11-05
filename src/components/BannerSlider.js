@@ -12,7 +12,7 @@ function BannerSlider() {
     <div className="banner-container">
       <Swiper
         modules={[Autoplay, Pagination, Navigation]}
-        autoplay={{ delay: 5000 }}
+        autoplay={{ delay: 4000 }}
         pagination={{ clickable: true }}
         navigation={true}
         loop
