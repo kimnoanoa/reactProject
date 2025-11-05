@@ -1,10 +1,10 @@
+/* 전체 Navbar */
 .navbar {
   width: 100%;
   height: 70px;
   display: flex;
+  justify-content: center; /* 내부 컨테이너 중앙 배치 */
   align-items: center;
-  justify-content: center;
-  padding: 0 30px;
   background: white;
   border-bottom: 1px solid #eee;
   position: sticky;
@@ -12,23 +12,33 @@
   z-index: 1000;
 }
 
+/* 안쪽 고정폭 컨테이너 */
+.navbar-inner {
+  width: 100%;
+  max-width: 1200px; /* ✅ 오늘의집 중앙폭 */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px; /* 좌우 여백 */
+}
+
 /* 로고 */
 .logo {
-  flex: 1;
   font-size: 22px;
   font-weight: 700;
   color: #00aaff;
   text-decoration: none;
+  margin-right: 40px; /* 로고 ↔ 메뉴 간격 */
 }
 
 /* 메뉴 */
 .navbar-menu {
-  flex: 2; /* 🔹 가운데로 이동할 여유공간 확보 */
   display: flex;
-  justify-content: flex-start; /* 왼쪽 정렬 */
   gap: 30px;
-  margin-left: 20px; /* 🔥 로고와의 간격 추가 */
   list-style: none;
+  margin: 0;
+  padding: 0;
+  margin-right: 40px; /* 메뉴 ↔ 검색창 간격 */
 }
 
 .navbar-menu li a {
@@ -47,9 +57,8 @@
   background: #f3f4f6;
   border-radius: 20px;
   padding: 5px 10px;
-  justify-content: left;
   align-items: center;
-  margin-right: 650px;
+  margin-right: 30px; /* 검색창 ↔ 로그인 간격 */
 }
 
 .navbar-search input {
@@ -71,7 +80,6 @@
 .navbar-auth {
   display: flex;
   gap: 10px;
-  margin-right: 50px;
 }
 
 .navbar-auth .login,
@@ -83,6 +91,7 @@
   border-radius: 6px;
   font-weight: 500;
   cursor: pointer;
+  transition: all 0.2s ease;
 }
 
 .navbar-auth .signup {
@@ -96,4 +105,11 @@
 
 .navbar-auth .signup:hover {
   background: #0095dd;
+}
+
+/* 전역 스크롤 방지 */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
 }

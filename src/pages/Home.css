@@ -1,7 +1,7 @@
 .home {
-  width: 80%;              /* 🔥 전체 콘텐츠 폭을 80%로 제한 */
-  margin: 0 auto;          /* 🔥 화면 가운데 정렬 */
-  padding: 40px 0;         /* 상하 여백만 */
+  width: 100%;              /* 🔥 전체 콘텐츠 폭을 80%로 제한 */
+  margin: 0;          /* 🔥 화면 가운데 정렬 */
+  padding: 0;         /* 상하 여백만 */
 }
 
 .section-title {

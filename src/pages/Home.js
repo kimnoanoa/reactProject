@@ -5,9 +5,9 @@ import "./Home.css";
 
 function Home() {
   const products = [
-    { image: "/images/room1.jpg", title: "화이트 원목 테이블", price: "129,000" },
-    { image: "/images/room2.jpg", title: "미니멀 조명 스탠드", price: "89,000" },
-    { image: "/images/room3.jpg", title: "패브릭 소파", price: "329,000" },
+    { image: "/images/whiteTable.jpg", title: "화이트 원목 테이블", price: "129,000" },
+    { image: "/images/minimalStand.jpg", title: "미니멀 조명 스탠드", price: "89,000" },
+    { image: "/images/fabricSofa.jpg", title: "패브릭 소파", price: "329,000" },
   ];
 
   return (
